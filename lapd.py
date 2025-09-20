@@ -1,9 +1,3 @@
-#!/usr/bin/env python3
-"""
-Simple LAPD Crime Dashboard
-using pandas, matplotlib, seaborn
-"""
-
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -213,5 +207,5 @@ plt.title("Heatmap: Crimes by Year and Month")
 plt.savefig(os.path.join(figures_folder, "year_month_heatmap.png"), dpi=300, facecolor='#0a1a2f')
 
 plt.tight_layout()
-
 plt.show()
+
