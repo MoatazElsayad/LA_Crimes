@@ -19,7 +19,9 @@ os.makedirs(figures_folder, exist_ok=True)
 # --------------------------
 # 1. Load the dataset
 # --------------------------
-df = pd.read_csv("lapd_crime_data.csv", low_memory=False)
+# df = pd.read_csv("lapd_crime_data.csv", low_memory=False)
+url = "https://data.lacity.org/api/views/2nrs-mtv8/rows.csv?accessType=DOWNLOAD"
+df = pd.read_csv(url, low_memory=False)
 
 # --------------------------
 # 2. Standardize column names (lowercase, underscores)
@@ -211,4 +213,5 @@ plt.title("Heatmap: Crimes by Year and Month")
 plt.savefig(os.path.join(figures_folder, "year_month_heatmap.png"), dpi=300, facecolor='#0a1a2f')
 
 plt.tight_layout()
+
 plt.show()
